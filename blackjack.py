@@ -42,7 +42,9 @@ def game():
         print(f"Your cards: {player_cards}, current score: {player_card_value}")
         print(f"The dealers first card is {dealer_cards[0]}")
 
-        if dealer_card_value == blackjack_definitions["blackjack"]:
+        if dealer_card_value == blackjack_definitions["blackjack"] and player_card_value == blackjack_definitions["blackjack"]:
+            print("You and the dealer got blackjacks! Its a draw.")
+        elif dealer_card_value == blackjack_definitions["blackjack"]:
             print("Dealer got a blackjack! You lost.")
         elif player_card_value == blackjack_definitions["blackjack"]:
             print("You got a blackjack! You win!")
